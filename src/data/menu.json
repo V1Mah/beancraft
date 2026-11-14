@@ -1,0 +1,14 @@
+[
+  {"id":1,"name":"Капучино","category":"Кофе","price":290,"from":true,"description":"Двойной эспрессо, бархатная молочная пенка"},
+  {"id":2,"name":"Латте","category":"Кофе","price":320,"from":true,"description":"Мягкий вкус, много нежного молока"},
+  {"id":3,"name":"Раф","category":"Кофе","price":350,"from":true,"description":"Сливки, ванильный сахар и эспрессо"},
+  {"id":4,"name":"Флэт уайт","category":"Кофе","price":340,"from":false,"description":"Двойной ристретто и тонкая микропена"},
+  {"id":5,"name":"Эспрессо","category":"Кофе","price":180,"from":false,"description":"Насыщенный, с карамельным послевкусием"},
+  {"id":6,"name":"Чай с облепихой","category":"Чай","price":260,"from":false,"description":"Чёрный чай, облепиха, мёд и имбирь"},
+  {"id":7,"name":"Матча латте","category":"Чай","price":340,"from":false,"description":"Церемониальная матча на овсяном молоке"},
+  {"id":8,"name":"Айс-кофе тоник","category":"Холодные","price":310,"from":false,"description":"Эспрессо, тоник и долька апельсина"},
+  {"id":9,"name":"Колд брю","category":"Холодные","price":300,"from":true,"description":"12 часов холодной экстракции"},
+  {"id":10,"name":"Круассан миндальный","category":"Десерты","price":240,"from":false,"description":"Хрустящий, с миндальным кремом"},
+  {"id":11,"name":"Чизкейк карамельный","category":"Десерты","price":330,"from":false,"description":"Нежный сыр и солёная карамель"},
+  {"id":12,"name":"Брауни","category":"Десерты","price":220,"from":false,"description":"Тёмный шоколад и грецкий орех"}
+]
