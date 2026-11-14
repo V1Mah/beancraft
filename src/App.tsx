@@ -3,6 +3,7 @@ import type { FormEvent } from 'react'
 import { loadMenu, sendOrder } from './api'
 import type { MenuItem } from './api'
 import { Bean, CoffeeCup } from './art'
+import fallbackMenu from './data/menu.json'
 
 const NAV = [
   ['features', 'Преимущества'],
@@ -21,7 +22,8 @@ const FEATURES = [
 const rub = (n: number) => `${n.toLocaleString('ru-RU')} ₽`
 
 export default function App() {
-  const [menu, setMenu] = useState<MenuItem[]>([])
+  // сразу показываем встроенное меню, данные API подменяют его после загрузки
+  const [menu, setMenu] = useState<MenuItem[]>(fallbackMenu as MenuItem[])
   const [offline, setOffline] = useState(false)
   const [cat, setCat] = useState('Все')
   const [cart, setCart] = useState<Record<number, number>>({})
