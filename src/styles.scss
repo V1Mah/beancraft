@@ -74,7 +74,7 @@ svg { display: block; }
   background: radial-gradient(900px 500px at 80% 20%, rgba($accent2, .22), transparent 60%), linear-gradient(180deg, $bg2, $bg);
   @include up($bp-md) { padding: 72px 0 88px; } }
 .hero__in { position: relative; display: grid; gap: 24px; align-items: center; text-align: center;
-  @include up($bp-lg) { grid-template-columns: 1.1fr .9fr; text-align: left; gap: 48px; } }
+  @include up($bp-lg) { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); text-align: left; gap: 48px; } }
 .hero__text { order: 2; @include up($bp-lg) { order: 1; } }
 .hero__art { order: 1; max-width: 300px; margin: 0 auto; width: 100%; @include up($bp-md) { max-width: 380px; } @include up($bp-lg) { order: 2; max-width: 460px; } }
 .eyebrow { display: inline-block; color: $accent; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 14px; }
@@ -88,14 +88,14 @@ svg { display: block; }
 /* sections */
 .section { padding: 56px 0; @include up($bp-md) { padding: 80px 0; } &--alt { background: $bg2; } }
 .grid { display: grid; gap: 16px; @include up($bp-md) { gap: 20px; } }
-.features { grid-template-columns: 1fr; @include up(560px) { grid-template-columns: repeat(2, 1fr); } @include up($bp-lg) { grid-template-columns: repeat(4, 1fr); } }
+.features { grid-template-columns: minmax(0, 1fr); @include up(560px) { grid-template-columns: repeat(2, minmax(0, 1fr)); } @include up($bp-lg) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .feature { transition: transform .2s, border-color .2s; &:hover { transform: translateY(-4px); border-color: $accent2; } h3 { font-size: 1.2rem; } p { color: $muted; margin: 0; font-size: .95rem; } }
 .feature__icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; font-size: 1.4rem; color: $ink; background: linear-gradient(135deg, $accent, $accent2); margin-bottom: 14px; }
 
-.filters { display: flex; gap: 8px; margin: 12px 0 24px; overflow-x: auto; padding-bottom: 6px; @include up($bp-md) { flex-wrap: wrap; overflow: visible; } }
+.filters { display: flex; gap: 8px; margin: 12px 0 24px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; &::-webkit-scrollbar { display: none; } @include up($bp-md) { flex-wrap: wrap; overflow: visible; padding-bottom: 0; } }
 .chip { flex: none; border: 1px solid $line; background: $card; color: $text; font: inherit; padding: 8px 18px; border-radius: 999px; cursor: pointer;
   &.is-active { background: $accent; color: $ink; border-color: $accent; font-weight: 600; } }
-.menu { grid-template-columns: 1fr; @include up(560px) { grid-template-columns: repeat(2, 1fr); } @include up($bp-lg) { grid-template-columns: repeat(3, 1fr); } @include up($bp-xl) { grid-template-columns: repeat(4, 1fr); } }
+.menu { grid-template-columns: minmax(0, 1fr); @include up(560px) { grid-template-columns: repeat(2, minmax(0, 1fr)); } @include up($bp-lg) { grid-template-columns: repeat(3, minmax(0, 1fr)); } @include up($bp-xl) { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
 .dish { display: flex; flex-direction: column; padding: 16px;
   h3 { font-size: 1.2rem; margin-bottom: .3em; } p { color: $muted; font-size: .92rem; flex: 1; } }
 .dish__art { height: 120px; border-radius: 14px; margin-bottom: 14px; display: grid; place-items: center;
@@ -108,9 +108,9 @@ svg { display: block; }
 .dish__foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; strong { font-size: 1.1rem; color: $accent; } }
 
 /* order */
-.order { display: grid; gap: 20px; @include up($bp-lg) { grid-template-columns: 1.1fr .9fr; align-items: start; gap: 28px; } h2 { font-size: 1.6rem; } }
+.order { display: grid; gap: 20px; @include up($bp-lg) { grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: start; gap: 28px; } h2 { font-size: 1.6rem; } }
 .cart ul { list-style: none; margin: 0; padding: 0; }
-.cart li { display: grid; grid-template-columns: 1fr auto auto; gap: 10px; align-items: center; padding: 12px 0; border-bottom: 1px solid $line; }
+.cart li { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 10px; align-items: center; padding: 12px 0; border-bottom: 1px solid $line; }
 .cart__name { min-width: 0; }
 .cart__sum { min-width: 70px; text-align: right; font-weight: 600; }
 .qty { display: inline-flex; align-items: center; gap: 8px;
@@ -125,11 +125,11 @@ svg { display: block; }
 .success__icon { width: 64px; height: 64px; margin: 0 auto 14px; border-radius: 50%; display: grid; place-items: center; font-size: 2rem; color: $ink; background: linear-gradient(135deg, $accent, $accent2); }
 
 /* about */
-.about { display: grid; gap: 28px; align-items: center; p { color: $muted; } @include up($bp-lg) { grid-template-columns: 1.2fr .8fr; gap: 56px; } }
-.stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
+.about { display: grid; gap: 28px; align-items: center; p { color: $muted; } @include up($bp-lg) { grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: 56px; } }
+.stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px;
   li { background: $card; border: 1px solid $line; border-radius: 16px; padding: 16px 8px; text-align: center; }
   b { display: block; font: 700 1.4rem Georgia, serif; color: $accent; } span { font-size: .8rem; color: $muted; }
-  @include up($bp-lg) { grid-template-columns: 1fr; li { display: flex; align-items: center; gap: 16px; text-align: left; padding: 16px 20px; b { min-width: 90px; font-size: 1.6rem; } } } }
+  @include up($bp-lg) { grid-template-columns: minmax(0, 1fr); li { display: flex; align-items: center; gap: 16px; text-align: left; padding: 16px 20px; b { min-width: 90px; font-size: 1.6rem; } } } }
 
 .footer { border-top: 1px solid $line; padding: 28px 0; color: $muted; font-size: .9rem; }
 .footer__in { display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center; .logo { margin: 0; } @include up($bp-md) { flex-direction: row; justify-content: space-between; text-align: left; } }
